@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpcaoMPC Servidor", "OpcaoMPC Servidor\OpcaoMPC Servidor.csproj", "{2E86CB92-6C3F-428D-9F3A-24ABE5B20831}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Modelo", "Modelo\Modelo.shproj", "{9C2EBAD4-C289-4F01-BBF8-64BCC0320340}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Controle", "Controle\Controle.shproj", "{26CD5ACA-B8A2-44A2-889E-C0FF3B0CBDC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpcaoMPC Android", "OpcaoMPC Android\OpcaoMPC Android.csproj", "{2A90C7DE-82E3-45BF-B5CC-45690363D329}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Controle\Controle.projitems*{26cd5aca-b8a2-44a2-889e-c0ff3b0cbdc1}*SharedItemsImports = 13
+		Controle\Controle.projitems*{2e86cb92-6c3f-428d-9f3a-24abe5b20831}*SharedItemsImports = 4
+		Modelo\Modelo.projitems*{2e86cb92-6c3f-428d-9f3a-24abe5b20831}*SharedItemsImports = 4
+		Modelo\Modelo.projitems*{9c2ebad4-c289-4f01-bbf8-64bcc0320340}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E86CB92-6C3F-428D-9F3A-24ABE5B20831}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E86CB92-6C3F-428D-9F3A-24ABE5B20831}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E86CB92-6C3F-428D-9F3A-24ABE5B20831}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E86CB92-6C3F-428D-9F3A-24ABE5B20831}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A90C7DE-82E3-45BF-B5CC-45690363D329}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A90C7DE-82E3-45BF-B5CC-45690363D329}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A90C7DE-82E3-45BF-B5CC-45690363D329}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2A90C7DE-82E3-45BF-B5CC-45690363D329}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A90C7DE-82E3-45BF-B5CC-45690363D329}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A90C7DE-82E3-45BF-B5CC-45690363D329}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

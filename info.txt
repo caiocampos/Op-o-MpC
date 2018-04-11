@@ -1,0 +1,45 @@
+colocar um produto como derivado de outro, assim sempre quando sair uma 
+lata de areia a areia real seria descontada
+
+Desconto máximo 20% do lucro
+
+Adicionar checkbox para modo orçamento, que permite adicionar mais 
+produtos do que o que há em estoque, e lista produtos em falta
+
+Adicionar "editar venda"
+
+Adicionar Bloqueio rápido
+
+Adicionar "Criar gasto genérico" na tela de gestão financeira
+
+Verificar data toda vez que for alterar o Caixa, se o dia mudou então 
+criar novo caixa para o novo dia
+
+Toda nova Compra, Venda ou Gasto Genérico (+Salários) atualizar o Caixa
+
+Adicionar botão para pagar salário na tela de funcionario (que gera novo 
+Gasto Genérico com dados do salário e nome do funcionário)
+
+Salário é calculado a partir do salário + todas as comissões do 
+período (caso comissionado)
+
+Histórico de vendas com pesquisa por data e cliente com opção de 
+reimprimir
+
+Não colocar o nome da loja na impressão
+
+Alterar senha
+
+Senha para cancelar ou alterar venda
+
+Apagar comissão de venda cancelada
+
+Mover quantidade do produto estoque atual para o novo produto estoque 
+criado a cada compra com o fornecedor
+
+Fazer tela para fluxo de estoque onde mostra quanto de um produto foi 
+vendido em um período
+
+A comissão é paga pelo dia do pagamento - 7 até o ultimo pagamento - 7
+
+Colocar um informe de lucro no cadastro da compra
