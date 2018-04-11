@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2E86CB92-6C3F-428D-9F3A-24ABE5B20831}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>OpcaoMPCServidor</RootNamespace>
+    <AssemblyName>OpcaoMPC Servidor</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Icone1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Npgsql">
+      <HintPath>..\DAO\bin\Debug\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controle\CtrlBloqueioTela.cs" />
+    <Compile Include="Controle\CtrlFuncionarioS.cs" />
+    <Compile Include="Controle\CtrlSuper.cs" />
+    <Compile Include="Controle\CtrlCaixaS.cs" />
+    <Compile Include="Controle\CtrlUsuarioS.cs" />
+    <Compile Include="DAL\Interfaces\IDAORemovivel .cs" />
+    <Compile Include="DAL\Util\DAOSuper .cs" />
+    <Compile Include="DAL\Util\Util.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DAL\DAOCaixa.cs" />
+    <Compile Include="DAL\DAOCliente.cs" />
+    <Compile Include="DAL\DAOComissao.cs" />
+    <Compile Include="DAL\DAOCompra.cs" />
+    <Compile Include="DAL\DAOFornecedor.cs" />
+    <Compile Include="DAL\DAOFuncionario.cs" />
+    <Compile Include="DAL\DAOGastoGenerico.cs" />
+    <Compile Include="DAL\DAOItemVenda.cs" />
+    <Compile Include="DAL\DAOProduto.cs" />
+    <Compile Include="DAL\DAOProdutoEstoque.cs" />
+    <Compile Include="DAL\DAOSubProduto.cs" />
+    <Compile Include="DAL\DAOVenda.cs" />
+    <Compile Include="DAL\Interfaces\IDAO.cs" />
+    <Compile Include="DAL\Interfaces\IDAODatado.cs" />
+    <Compile Include="DAL\Interfaces\IDAONomeado.cs" />
+    <Compile Include="DAL\Util\ConexaoBanco.cs" />
+    <Compile Include="Controle\MPCConfigManager.cs" />
+    <Compile Include="DAL\Util\DAOLog.cs" />
+    <Compile Include="Visao\Gestao\FrmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Gestao\FrmCliente.Designer.cs">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Gestao\FrmEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Gestao\FrmEstoque.Designer.cs">
+      <DependentUpon>FrmEstoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Gestao\FrmFinanca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Gestao\FrmFinanca.Designer.cs">
+      <DependentUpon>FrmFinanca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Gestao\FrmFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Gestao\FrmFornecedor.Designer.cs">
+      <DependentUpon>FrmFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Gestao\FrmFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Gestao\FrmFuncionario.Designer.cs">
+      <DependentUpon>FrmFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Gestao\FrmVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Gestao\FrmVenda.Designer.cs">
+      <DependentUpon>FrmVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Validacao\FrmSuperUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Validacao\FrmSuperUsuario.Designer.cs">
+      <DependentUpon>FrmSuperUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Cadastro\FrmCadFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Cadastro\FrmCadFuncionario.Designer.cs">
+      <DependentUpon>FrmCadFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Artefato\UCtrlItemVenda.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visao\Artefato\UCtrlItemVenda.Designer.cs">
+      <DependentUpon>UCtrlItemVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\FrmGerencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\FrmGerencia.Designer.cs">
+      <DependentUpon>FrmGerencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\FrmInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\FrmInicial.Designer.cs">
+      <DependentUpon>FrmInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Cadastro\FrmCadCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Cadastro\FrmCadCaixa.Designer.cs">
+      <DependentUpon>FrmCadCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Artefato\BtnPlusMinus.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Visao\Validacao\FrmTesteUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Validacao\FrmTesteUsuario.Designer.cs">
+      <DependentUpon>FrmTesteUsuario.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Gestao\FrmFornecedor.resx">
+      <DependentUpon>FrmFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Gestao\FrmFuncionario.resx">
+      <DependentUpon>FrmFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Validacao\FrmSuperUsuario.resx">
+      <DependentUpon>FrmSuperUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Cadastro\FrmCadFuncionario.resx">
+      <DependentUpon>FrmCadFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Artefato\UCtrlItemVenda.resx">
+      <DependentUpon>UCtrlItemVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\FrmGerencia.resx">
+      <DependentUpon>FrmGerencia.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\FrmInicial.resx">
+      <DependentUpon>FrmInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Cadastro\FrmCadCaixa.resx">
+      <DependentUpon>FrmCadCaixa.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Validacao\FrmTesteUsuario.resx">
+      <DependentUpon>FrmTesteUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icone5.ico" />
+    <None Include="Resources\Icone4.ico" />
+    <None Include="Resources\Icone3.ico" />
+    <None Include="Resources\Icone2.ico" />
+    <None Include="Resources\Icone1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mais.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Botao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cadeado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edicao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lixeira.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pagamento.png" />
+  </ItemGroup>
+  <Import Project="..\Controle\Controle.projitems" Label="Shared" />
+  <Import Project="..\Modelo\Modelo.projitems" Label="Shared" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
